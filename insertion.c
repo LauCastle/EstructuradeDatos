@@ -89,23 +89,40 @@ void pantalla(int a[], int n){
 	printf("%d\n", a[n-1]);
 }
 
+void busqueda(int A[], int n){
+	int r=0;
+	printf("¿Que numero quiere buscar? ");
+	scanf("%d",&r);
+
+	for(int i = 0; i < n; i++){
+               if(A[i]==r){
+        	printf("el lugar es %d \n",i);
+		break;
+	       }
+	}
+	printf("no existe el numero");          
+	
+}
+
 void main(){
 	int t=10;
 	int num=0;
+	int pos=0;
+
 	leer_archivo(a,t);
 
-	printf("\nValores desordenados: ");
+	//printf("\nValores desordenados: ");
 	pantalla(a,t);
-	//bubbleSort(a,t);
+	bubbleSort(a,t);
 	//insertion_sort(a,t);
-	quicksort(a,0,t-1);
-	printf("\nValores ordenados: ");
+	//quicksort(a,0,t-1);
+	//printf("\nValores ordenados: ");
 	pantalla(a,t);
-	printf("¿Que numero deseas buscar? \n");
-	scanf("%d",&num);
-	
+	//printf("¿Que numero deseas buscar? \n");
+	//scanf("%d",&num);
+	busqueda(a,t);
 	
 
 	//Busqueda...
-	printf("Encrontre el numero en la posicion %d\n",pos);
+	//printf("Encrontre el numero en la posicion %d\n",pos);
 }
