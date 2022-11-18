@@ -3,7 +3,7 @@
 
 //Estructura de Datos 3°D
 //Insertion Sort
-int a[5];
+int a[10];
 
 
 void intercambio(int *x, int *y)// en ingles swap().
@@ -90,7 +90,8 @@ void pantalla(int a[], int n){
 }
 
 void main(){
-	int t=5;
+	int t=10;
+	int num=0;
 	leer_archivo(a,t);
 
 	printf("\nValores desordenados: ");
@@ -100,6 +101,11 @@ void main(){
 	quicksort(a,0,t-1);
 	printf("\nValores ordenados: ");
 	pantalla(a,t);
-	printf("\n\n");
-}
+	printf("¿Que numero deseas buscar? \n");
+	scanf("%d",&num);
+	
+	
 
+	//Busqueda...
+	printf("Encrontre el numero en la posicion %d\n",pos);
+}
